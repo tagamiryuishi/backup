@@ -1,0 +1,10 @@
+package rensyu;
+public class rensyu {
+
+
+
+String input=new java.util.Scanner(System.in).nextLine();
+System.out.println("あなたの名前を入力してください");
+
+
+}
