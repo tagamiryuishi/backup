@@ -14,5 +14,6 @@
 <form action="WelcomeAction">
 <s:submit value="Welcome"/>
 </form>
+
 </body>
 </html>
