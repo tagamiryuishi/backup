@@ -1,0 +1,21 @@
+
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ex1
+ */
+
+@WebServlet("/ex1")
+public class ex1 extends HttpServlet {
+	protected void doget(HttpServletRequest request,HttpServletResponse response)
+	throws ServletException,IOException{
+
+
+	}
+	}

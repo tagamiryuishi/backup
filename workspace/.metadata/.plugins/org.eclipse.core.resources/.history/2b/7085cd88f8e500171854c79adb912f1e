@@ -1,0 +1,17 @@
+
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class ex1
+ */
+
+@WebServlet("/ex1")
+public class ex1 extends HttpServlet {
+	protected void doget(HttpSrvletRequest request,HttpServletResponse response)
+	throws ServletException,IOException{
+
+
+	}
+	}

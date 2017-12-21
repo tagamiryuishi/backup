@@ -1,0 +1,15 @@
+<%
+String name="湊 雄輔";
+int age =23;
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSPの練習</title>
+</head>
+<body>
+私の名前は<%=name %>です。年齢は<%=age %>歳です4.
+</body>
+</html>

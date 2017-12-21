@@ -1,0 +1,11 @@
+<%@ page contentType="text/html;charset=utf-8"%>
+
+<%--JSPコメント--%>
+<html>
+<head><title>2種類のコメント</title></head>
+<body>
+<!-- HTMLコメント -->
+Hello
+</body>
+</html>
+
