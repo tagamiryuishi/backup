@@ -12,6 +12,3 @@ method="execute">
 </package>
 </struts>
 
-<action name="WelcomeAction"class="com.internousdev.webproj.action.WelcomAction"method="execute">
-</action>
-
