@@ -1,0 +1,75 @@
+73-77　formタグで囲まれている
+74.75　<s:textfield　<s:password アクションクラスに渡す事ができる
+76　　<s:submit　LoginActionへおくる
+アクションクラスに送りたい場合はformタグを使用
+
+loginAction.java
+
+29　
+
+34　String loginPassword;
+ログインパスワードと入力された値が　String loginPassword;の箱に入る
+
+29-59　フィールド変数と呼ぶ（7つ）
+ログイン変数の中で作成されるメソッドのなかであればすきに使える
+
+
+49
+newとは LoginDAOクラスがloginDAOにコピーされている（インスタンス化）
+
+64
+このクラスがやるべき操作を入力していく
+メソッド　（）｛　が記述される
+動きの動作が入る
+
+メソッド名　execute
+
+69
+loginDAOの中のgetLoginUserInfoメソッドを実行（動かすことが可能）
+
+LoginDAOクラスの
+25行目
+メソッドを動かす為に必要な情報が（）に記述されている
+
+27
+メソッドの中で始めて作る
+
+ローカル変数
+メソッドの中でしか使えないメソッド
+
+
+フィールド変数
+色んなところで使う
+
+30
+（SQL）は27のSQLの？に置き換えるための準備をしている
+
+31
+sql（）の左から1.2
+カッコ内を置き換える
+
+34
+resultSet　を定義
+DBから取得した値がresultSet　に入っている
+
+36　resultSet.next
+DBから値を取得できればtru
+
+37-39
+loginDTO.setLoginId
+loginDTO.setLoginPassword
+loginDTO.setUserName
+
+カプセル化
+37-39のloginDTOクラスはカプセルクラスになる
+
+LOGINDTOクラス
+5.7.9.11
+
+set
+
+21
+etLoginPassword() {
+return loginPassword;
+フィールド変数の値を
+

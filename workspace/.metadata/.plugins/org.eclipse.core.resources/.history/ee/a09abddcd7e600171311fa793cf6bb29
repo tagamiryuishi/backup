@@ -1,0 +1,8 @@
+package ccom.internousdev.template.action;
+
+/**
+*ログイン認証処理
+*login.jspからログインID、ログインパスワードを受け取り
+*DBへ問い合わせを行う。
+*/
+
