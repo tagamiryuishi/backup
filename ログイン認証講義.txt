@@ -1,30 +1,114 @@
-73-77　formタグで囲まれている
-74.75　<s:textfield　<s:password アクションクラスに渡す事ができる
-76　　<s:submit　LoginActionへおくる
+-----Login.jsp
+
+73-77　s:formタグで囲まれている。
+74-75　<s:textfield　<s:password 　"LoginAction"に渡す事ができる
+76　　<s:submit　ボタンの役割で"loginUserId"　"loginPassword"の情報をLoginActionへおくる
 アクションクラスに送りたい場合はformタグを使用
 
-loginAction.java
+---loginAction.java
 
-29　
+29　private String loginUserId;
+Login.jspで書いた"loginUserId"の変数の中に情報が格納されている
 
-34　String loginPassword;
-ログインパスワードと入力された値が　String loginPassword;の箱に入る
+
+34　private String loginPassword;
+　Login.jspで書いた"loginPassword"と入力された値が　String loginPassword;の箱に入る
 
 29-59　フィールド変数と呼ぶ（7つ）
-ログイン変数の中で作成されるメソッドのなかであればすきに使える
+　ログインアクションの中で作成されるメソッドのなかであれば自由に利用できる。
 
 
-49
-newとは LoginDAOクラスがloginDAOにコピーされている（インスタンス化）
+49　private LoginDAO loginDAO = new LoginDAO();
+　newとは LoginDAOクラスがloginDAO（変数）にコピーされている（インスタンス化）
+　54.59も同様
 
-64
-このクラスがやるべき操作を入力していく
-メソッド　（）｛　が記述される
-動きの動作が入る
-
+64　public String execute() {　
+(){　　←このマークはメソッド　動きの動作、処理の内容が書かれている。
 メソッド名　execute
 
-69
+66　result = ERROR;
+　39行目の　private String result;と同じ。
+フィールド変数にresult型の箱を定義し、メソッドの中で利用している。
+　66行目の ERRORはerrorが入ってくる。
+　24行目extends ActionSupportクラスを継承しており、このクラスの中でERROR＝errorが入っている。
+　64行目のexecute() {　メソッドが実行されたならば、resultの文字列が入る箱に文字列のerrorを入れる。
+
+69　loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
+　loginDAOの変数の中にはLoginDAOクラスのソースコードがコピーが入っている。
+　.を繋げるとそのloginDAOの中のgetLoginUserInfo(loginUserId, loginPassword);
+　を実行が可能になる。
+
+　LoginDAOクラスの25行目のgetLoginUserInfoのメソッドを呼び出して動かしている。
+　(String loginUserId, String loginPassword) {
+　getLoginUserInfoメソッドを呼び出すときは、String型のloginUserId,loginPasswordの二つの変数が必要。
+　
+---LoginAction.java
+69　loginDAO.getLoginUserInfoでメソッドを呼び出し、JSPで入力されたloginUserId, loginPassword
+　　この二つの値がgetLoginUserInfoの引数として入れている。
+
+---LoginDAO.java
+27　String sql
+　メソッドの中で始めて定義しているものをローカル変数といい、作られたメソッドの中でしか使用できない。
+　今回はsqlというローカル変数
+　LoginUserInfoのメソッドの中でしか使用できない。
+　汎用的に使う場合はフィールド変数を使う。
+　"SELECT"はDBから選択した情報を取得する。FROMの後に書かれている物は検索対象のテーブル名
+　　
+　login_user_transactionというテーブルの中で？の情報と一致する物をDBの中から情報を取得する。
+　現時点では、パスワードやID情報を入力をしても？と認識されてしまう。　30行目～で設定可能
+　
+30　PreparedStatement preparedStatement = connection.prepareStatement(sql);
+　PreparedStatementクラスのコピーがpreparedStatementに入っている。
+　connection.prepareStatement(sql);　引数に（sql）を入れることで、27行目のsqlに入っている？に対して
+　loginUserId,loginPasswordの情報を置き換える準備を30行目でしている。
+　
+
+31-32　preparedStatement.setString(1, loginUserId);
+　27行目のローカル変数のsqlの左側から1番目の？をloginUserIdに置き換える
+　32行目も同様。2番目の？をloginPasswordに置き換える。
+　27行目のloginUserId =入力した情報、loginPassword=入力した情報になる。？→入力した情報になる。
+　login_user_transactionのテーブルの中に入っている、loginUserIdとloginPasswordのカラム情報が入力した
+　ID、passwordの一致した情報をDBから持ってくる
+
+34　ResultSet resultSet = preparedStatement.executeQuery();
+　　resultSetには27行目のDBで取得したSELECT文の情報が入っている。
+
+36　if(resultSet.next()) {
+　.nextはもし値が入っていればtrueと返す。DBから値が取得できなければ、falseとなる。
+　入力した情報とDBに入っている情報(id password)が一致するか否か。true or false
+
+37-39
+ loginDTOはカプセルクラスという
+
+---LoginDTO.java
+5.7.9.11行目
+ loginId、loginPassword、userName、loginFlgの4つのフィールドを定義している。
+ 
+17 public void setLoginId(String loginId) {
+ this. はフィールド変数のloginIdという意味。
+　フィールド変数のloginIdの中に引数のloginIdを代入している。
+
+21 public String getLoginPassword() { return loginPassword;}
+ loginDTOのフィールド変数の値を呼び出し先へ投げている。
+
+LoginDTOはgetとsetの二つしかない。フィールド変数で値を入れる、値を入れたフィールド変数を取り出す
+カプセルクラスという。
+
+---LoginDAO
+37 引数の中resultSet.getString　resultSetは34行目でsql文を実行した結果が入っている。
+　sql文は27行目。sql文を実行するとresultSetに入る。
+
+　
+ 
+
+    
+
+
+
+
+
+
+
 loginDAOの中のgetLoginUserInfoメソッドを実行（動かすことが可能）
 
 LoginDAOクラスの

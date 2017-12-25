@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_gj3BUuXrEeeAFZrETwpa_g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_hOrf8-XrEeeAFZrETwpa_g" label="%trimmedwindow.label.eclipseSDK" x="565" y="0" width="1031" height="860">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_gj3BUuXrEeeAFZrETwpa_g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_hOrf8-XrEeeAFZrETwpa_g" label="%trimmedwindow.label.eclipseSDK" x="227" y="62" width="1031" height="860">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -169,7 +169,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrAOXsEeeMGrcRWdipCw" elementId="org.eclipse.wst.server.ui.ServersView" ref="_-wEEwOXsEeeMGrcRWdipCw"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrAeXsEeeMGrcRWdipCw" elementId="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" ref="_-wEr0OXsEeeMGrcRWdipCw"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrAuXsEeeMGrcRWdipCw" elementId="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" ref="_-wEr0eXsEeeMGrcRWdipCw"/>
-                <children xsi:type="advanced:Placeholder" xmi:id="_-wPrA-XsEeeMGrcRWdipCw" elementId="org.eclipse.ui.views.ProblemView" toBeRendered="false" ref="_hvaOheXrEeeAFZrETwpa_g"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_-wPrA-XsEeeMGrcRWdipCw" elementId="org.eclipse.ui.views.ProblemView" ref="_hvaOheXrEeeAFZrETwpa_g"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrBOXsEeeMGrcRWdipCw" elementId="org.eclipse.ui.views.TaskList" toBeRendered="false" ref="_-wFS4OXsEeeMGrcRWdipCw"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrBeXsEeeMGrcRWdipCw" elementId="org.eclipse.ui.console.ConsoleView" toBeRendered="false" ref="_hvaOieXrEeeAFZrETwpa_g"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_-wPrBuXsEeeMGrcRWdipCw" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_hvaOiuXrEeeAFZrETwpa_g"/>
@@ -272,7 +272,7 @@
       <tags>categoryTag:&#x4e00;&#x822c;</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_hvj_dOXrEeeAFZrETwpa_g" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x30d7;&#x30ed;&#x30b8;&#x30a7;&#x30af;&#x30c8;&#x30fb;&#x30a8;&#x30af;&#x30b9;&#x30d7;&#x30ed;&#x30fc;&#x30e9;&#x30fc;" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1513818541433&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:&#x4e00;&#x822c;</tags>
       <menus xmi:id="_-ws98OXsEeeMGrcRWdipCw" elementId="org.eclipse.ui.navigator.ProjectExplorer">
@@ -342,7 +342,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hXmycuXrEeeAFZrETwpa_g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_lOjZYOXsEeeMGrcRWdipCw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_gk5lA-XrEeeAFZrETwpa_g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_MSbT8OkWEeeO_sBsFPBcaA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_gk5lA-XrEeeAFZrETwpa_g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hXmyc-XrEeeAFZrETwpa_g" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -375,7 +375,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hXwjcOXrEeeAFZrETwpa_g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_lOsjUOXsEeeMGrcRWdipCw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" type="Check" command="_gk5knuXrEeeAFZrETwpa_g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_MSlE9OkWEeeO_sBsFPBcaA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" type="Check" command="_gk5knuXrEeeAFZrETwpa_g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hXwjceXrEeeAFZrETwpa_g" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
